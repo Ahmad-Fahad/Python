@@ -189,7 +189,7 @@ t = list(r)
 print(t)
 print(t[1])
 
-"""
+
 x, y = input().split() 
 x = int(x)
 y = int(y)
@@ -203,3 +203,43 @@ print(m)
 
 a = list(map(int, input().split()))
 print(a) 
+
+while True:
+	try:
+	    x = input()
+	    print(x)
+    except EOFError:
+        break
+
+
+
+while True:
+	try:
+		print(input())
+	except EOFError:
+		break
+
+		
+
+
+x = 90
+y = 0
+whil
+try:
+	result = x / y
+except ZeroDivisionError:
+	print("You can't divide s")
+
+"""
+
+def avg(n):
+	if not n:
+		return none
+
+	return sum(n)/len(n)
+
+
+if __name__ == "__main__":
+
+	l = [1,2,3,4,5]
+	print(avg(l))

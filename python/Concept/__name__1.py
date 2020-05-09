@@ -1,2 +1,3 @@
-#print(__name__)
-print("Welcome ....!")
+def  f():
+	print("Welcome ....! from 1    "+__name__)
+

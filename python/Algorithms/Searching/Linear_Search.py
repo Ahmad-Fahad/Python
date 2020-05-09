@@ -1,4 +1,4 @@
-def linear_search(lst, x):
+def Linear_Search(lst, x):
 	i = 0
 	n = len(lst)
 	while(i < n):
@@ -9,7 +9,7 @@ def linear_search(lst, x):
 while True:
 	lst   = [1,2,3,4,5,6,7,89,90,67,45,34]
 	x     = int(input())
-	index = linear_search(lst, x)
+	index = Linear_Search(lst, x)
 	print(index)
 	if index == -1:
 		print("Not Found")

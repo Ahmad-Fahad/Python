@@ -230,7 +230,7 @@ try:
 except ZeroDivisionError:
 	print("You can't divide s")
 
-"""
+
 
 def avg(n):
 	if not n:
@@ -243,3 +243,56 @@ if __name__ == "__main__":
 
 	l = [1,2,3,4,5]
 	print(avg(l))
+
+
+
+
+lst = [9,5,2,2,4,1,0,8]
+lst.sort()
+print(lst)
+
+
+
+while True:
+	n,q = input().split()
+	n   = int(n)
+	q   = int(q)
+	lst_n = []
+	lst_q = []
+	if (n == 0) and (q == 0):
+		break
+	else:
+		for i in range(n):
+			x = int(input())
+			lst_n.append(x)
+		lst_n.sort()
+
+		print(lst_n)
+
+		for i in range(q):
+			x = int(input())
+			lst_q.append(x)
+
+
+"""
+
+def search(lst, x):
+	i = 0
+	n = len(lst)
+	while(i < n):
+		if lst[i] == x:
+			return i
+		i += 1
+	return -1
+lst_n = [2,2,3,3,4,4,5,10,11,13]
+lst_q = [3,2,4,8,10]
+#lst_q = [2]
+for i in lst_q:
+	print(i)
+	index = search(lst_n, i) 
+	index = int(index)
+	print(index)
+	if index == -1:
+		print("{} not found".format(i))
+	else:
+		print("{} found at {}".format(i, index+1))

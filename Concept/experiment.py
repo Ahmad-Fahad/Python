@@ -274,7 +274,7 @@ while True:
 			lst_q.append(x)
 
 
-"""
+
 
 def search(lst, x):
 	i = 0
@@ -296,3 +296,4 @@ for i in lst_q:
 		print("{} not found".format(i))
 	else:
 		print("{} found at {}".format(i, index+1))
+"""

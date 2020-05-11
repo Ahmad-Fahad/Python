@@ -10,7 +10,7 @@ def Insertion_Sort(lst):
 			j = j-1
 	return lst
 
-lst = [6,5,4,0,2,1]
+lst = [3,2,1]
 print(Insertion_Sort(lst))
 
 """

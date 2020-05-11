@@ -10,7 +10,7 @@ def Selection_Sort(lst):
 	return lst
 
 
-lst = [6,5,4,3,2,1]
+lst = [3,2,1] #problem generating
 print(Selection_Sort(lst))
 
 """

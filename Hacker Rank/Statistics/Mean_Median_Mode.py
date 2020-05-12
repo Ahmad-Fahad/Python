@@ -31,5 +31,3 @@ if flag == 1:
 	print(index)
 else:
 	print(lst[0])
-
-	

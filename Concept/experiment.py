@@ -296,4 +296,7 @@ for i in lst_q:
 		print("{} not found".format(i))
 	else:
 		print("{} found at {}".format(i, index+1))
+
+
+ print(' '.join(str(x) for x in lst_n))
 """

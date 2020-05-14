@@ -8,8 +8,6 @@ def Selection_Sort(lst):
 				index = j
 		lst[i], lst[index] = lst[index], lst[i]
 	return lst
-
-
 lst = [3,2,1] #problem generating
 print(Selection_Sort(lst))
 

@@ -1,26 +1,20 @@
+def is_correct(s):
+    lst = list()
+    for i in s:
+        if i == '(':
+            lst.append(i)
+        elif i ==')':
+            if not lst:
+                return False
+            lst.pop()
+    if not lst:
+        return True
+    else:
+        return False
 
-murd = {}
-ered = []
-
-while True:
-    try:
-        kill, dead = input().split()
-        if kill in murd:
-            murd[kill] += 1
-            ered.append(dead)
-        else:
-            murd[kill] = 1
-            ered.append(dead)
-
-
-    except EOFError:
-        break
-
-
-for i in ered:
-    murd.pop(i, None)
-
-print('HALL OF MURDERERS')
-
-for i, v in sorted(murd.items()):
-    print(i, v)
+exp  = input()
+flag = is_correct(exp)
+if flag==True:
+    print("correct")
+else:
+    print("incorrect") 

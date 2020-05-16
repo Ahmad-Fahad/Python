@@ -299,8 +299,21 @@ for i in lst_q:
 
 
  print(' '.join(str(x) for x in lst_n))
-"""
+
 
 l = []
 if not l:
 	print("not")
+
+"""
+
+
+
+strg = "abracadabra"
+lst  = list(strg)
+
+lst[5] = 'k'
+lst = "".join(lst)
+
+
+print(type(lst))

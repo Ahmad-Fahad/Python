@@ -1,11 +1,25 @@
-def mutate_string(string, position, character):
-	lst = list(string)
-	lst[position] = character
-	lst = "".join(lst)
-	return lst
+#!/bin/python3
 
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+	lst  = s.split()
+	t    = ""
+	for i in lst:
+    	t = t + i.capitalize() + " "
+    return t
 if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
     s = input()
-    i, c = input().split()
-    s_new = mutate_string(s, int(i), c)
-    print(s_new)
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()

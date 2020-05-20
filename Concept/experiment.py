@@ -305,7 +305,7 @@ l = []
 if not l:
 	print("not")
 
-"""
+
 
 
 
@@ -317,3 +317,8 @@ lst = "".join(lst)
 
 
 print(type(lst))
+
+
+
+print(ord('9'))
+"""

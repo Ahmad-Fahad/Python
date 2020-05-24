@@ -3,10 +3,10 @@ class Queue:
 		self.lst   = []
 		self.front = 0
 		self.rear  = 0
-	def enqueue(self, item):
+	def enQueue(self, item):
 		self.lst.insert(self.rear, item)
 		self.rear += 1
-	def dequeue(self):
+	def deQueue(self):
 		item = self.lst[self.front]
 		self.front += 1
 		return item
@@ -16,13 +16,13 @@ class Queue:
 		return False
 		
 q = Queue()
-q.enqueue(1)
-q.enqueue(2)
-q.enqueue(3)
-q.enqueue(4)
-q.enqueue(5)
+q.enQueue(1)
+q.enQueue(2)
+q.enQueue(3)
+q.enQueue(4)
+q.enQueue(5)
 
 while not q.is_empty():
 	print(q.is_empty())
-	qq = q.dequeue()
+	qq = q.deQueue()
 	print(qq)

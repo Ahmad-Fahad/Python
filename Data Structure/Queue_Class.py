@@ -1,9 +1,9 @@
 class Queue:
 	def __init__(self):
 		self.lst = list()
-	def enqueue(self, item):
+	def enQueue(self, item):
 		self.lst.append(item)
-	def dequeue(self):
+	def deQueue(self):
 		return self.lst.pop(0)
 	def is_empty(self):
 		if self.lst == []:
@@ -11,13 +11,13 @@ class Queue:
 		return False
 		
 st = Queue()
-st.enqueue(1)
-st.enqueue(2)
-st.enqueue(3)
-st.enqueue(4)
-st.enqueue(5)
+st.enQueue(1)
+st.enQueue(2)
+st.enQueue(3)
+st.enQueue(4)
+st.enQueue(5)
 
 while not st.is_empty():
 	print(st.is_empty())
-	pp = st.dequeue()
+	pp = st.deQueue()
 	print(pp)

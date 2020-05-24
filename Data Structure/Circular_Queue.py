@@ -5,7 +5,7 @@ class Queue:
 		self.Present_Q = 0
 		self.front	   = 0
 		self.rear	   = 0
-	def enqueue(self, data):
+	def enQueue(self, data):
 		if self.is_full():
 			print("Queue is full")
 			return
@@ -13,7 +13,7 @@ class Queue:
 		self.lst.insert(self.rear, data)
 		self.rear       = (self.rear+1) % self.Q_size
 		self.Present_Q += 1
-	def dequeue(self):
+	def deQueue(self):
 		if self.is_empty():
 			print("Queue is empty")
 			return
@@ -35,25 +35,25 @@ print(q.lst)
 print(q.front)
 print(q.rear)
 
-q.enqueue(1)
-q.enqueue(2)
-q.enqueue(3)
-q.enqueue(4)
-q.enqueue(5)
+q.enQueue(1)
+q.enQueue(2)
+q.enQueue(3)
+q.enQueue(4)
+q.enQueue(5)
 
 print(q.lst)
 print(q.front)
 print(q.rear)
 
-q.enqueue(6)
-q.enqueue(7)
+q.enQueue(6)
+q.enQueue(7)
 
-print(q.dequeue())
-print(q.dequeue())
-print(q.dequeue())
-print(q.dequeue())
-print(q.dequeue())
-print(q.dequeue())
+print(q.deQueue())
+print(q.deQueue())
+print(q.deQueue())
+print(q.deQueue())
+print(q.deQueue())
+print(q.deQueue())
 
 print(q.lst)
 print(q.front)

@@ -86,7 +86,7 @@ n_index = 19
 i = head
 while nextPointer[i] != None:
 	index = i
-	i = nextPointer[i]
+	i     = nextPointer[i]
 	
 
 #....Main Algo.....
@@ -98,8 +98,8 @@ data[n_index]      = n_data
 
 i = head
 while nextPointer[i] != None:
-	#print(data[i])
+	print(data[i]) # little problem to be fixed. insert ok . print not show
 	i = nextPointer[i]
-	print(data[i], nextPointer[i])
+	#print(data[i])  
 
 print(".................")

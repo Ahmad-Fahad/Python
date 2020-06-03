@@ -1,0 +1,8 @@
+n_1   = int(input())
+lst_1 = input().split()
+n_2   = int(input())
+lst_2 = input().split()
+st_1 = set(lst_1)
+st_2 = set(lst_2)
+st_3 = st_1.union(st_2)
+print(len(st_3))

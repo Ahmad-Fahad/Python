@@ -10,6 +10,7 @@ class Node:
 class Linked_List:
 	def __init__(self):
 		self.head = Node()
+		
 	def __repr__(self):
 		nodes = list()
 		i     = self.head.next

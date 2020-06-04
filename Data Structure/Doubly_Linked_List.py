@@ -17,15 +17,29 @@ nextPointer[7]  = 15
 nextPointer[9]  = 7
 nextPointer[12] = 2
 
-pre_Data = [None]*20
+pre_index = [None]*20
 
-nextPointer[0]  = None
-nextPointer[2]  = 6
-nextPointer[3]  = 0
-nextPointer[7]  = 9
-nextPointer[9]  = 2
-nextPointer[12] = 3
-nextPointer[15] = 7
+pre_index[0]  = None
+pre_index[2]  = 12
+pre_index[3]  = 0
+pre_index[7]  = 9
+pre_index[9]  = 2
+pre_index[12] = 3
+pre_index[15] = 7
 
 head = 0
 
+i = head
+while nextPointer[i] != None:
+	print(i, data[i])
+	index = i
+	i = nextPointer[i]
+
+print("Last Node")
+print(index, data[index])
+print()
+
+i = index
+while pre_index[i] != None:
+	i = pre_index[i]
+	print(i, data[i])

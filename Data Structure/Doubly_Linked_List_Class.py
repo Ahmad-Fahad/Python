@@ -20,8 +20,12 @@ class Linked_List:
 		return ",".join(nodes)
 
 	def prepend(self, data):
-		node           = Node(data, self.head.next) #self.head.next -->next of head now_ next of node1
-		self.head.next = node
+		first_node      = self.head.next	
+		node            = Node(data, first_node)
+		self.head.next  = node
+		if first_node:
+			first_node.prev = node
+
 
 	def append(self, data):
 		node = Node(data)
@@ -31,7 +35,8 @@ class Linked_List:
 		i = self.head.next
 		while i.next:
 			i  = i.next
-		i.next = node
+		node.prev = i
+		i.next    = node
 
 	def insert(self, pre_data, data):
 		node = Node(data)
@@ -43,6 +48,7 @@ class Linked_List:
 		temp      = i.next
 		i.next    = node
 		node.next = temp 
+		node.prev = i
 
 	def remove(self, data):
 		pre_data = self.head
@@ -57,6 +63,7 @@ class Linked_List:
 		if pre_data == self.head:
 			self.head.next = i.next
 		else:
+			i.next.prev   = pre_data
 			pre_data.next = i.next
 
 	def search(self, data):
@@ -67,6 +74,51 @@ class Linked_List:
 			i = i.next
 		return False
 
+	def reverse(self):
+		i = self.head.next
+		while i.next:
+			i = i.next
+		c_node = i
+		r_lst  = []
+		r_lst.append(c_node)
+		while c_node.prev:
+			c_node = c_node.prev
+			r_lst.append(c_node)
+		return r_lst
+
+	def test(self):
+		print()
+		print("Head")
+		print(repr(self.head.data))
+		print(repr(self.head.next))
+		print(repr(self.head.prev))
+		print()
+		print("Node 1")
+		print(repr(self.head.next.data))
+		print(repr(self.head.next.next))
+		print(repr(self.head.next.prev))
+		print()
+		
+
+		self.prepend(99)
+		print()
+		print("Head")
+		print(repr(self.head.data))
+		print(repr(self.head.next))
+		print(repr(self.head.prev))
+		print()
+		print("Node 1")
+		print(repr(self.head.next.data))
+		print(repr(self.head.next.next))
+		print(repr(self.head.next.prev))
+		print()
+
+
+		print("Node 2")
+		print(repr(self.head.next.next.data))
+		print(repr(self.head.next.next.next))
+		print(repr(self.head.next.next.prev))
+
 
 
 ll = Linked_List()
@@ -74,6 +126,35 @@ ll = Linked_List()
 ll.append(5)
 ll.append(10)
 ll.prepend(1)
+ll.append(20)
+ll.append(30)
+ll.append(40)
+ll.append(50)
+
+print(repr(ll))
+rev_lst = ll.reverse()
+
+for i in rev_lst:
+	print(repr(i))
+
+ll.prepend(99)
+ll.append(111)
+ll.insert(5, 5555)
+ll.remove(40)
+
+print(repr(ll))
+rev_lst = ll.reverse()
+
+for i in rev_lst:
+	print(repr(i))
+
+"""
+
+ll.test()
+
+
+
+
 
 x = 5
 if ll.search(x) == False:
@@ -83,9 +164,13 @@ else:
 
 ll.append(50)
 ll.insert(10,33)
-print(repr(ll))
+
+
+
+
 ll.remove(5)
 print(repr(ll))
+"""
 
 
 """

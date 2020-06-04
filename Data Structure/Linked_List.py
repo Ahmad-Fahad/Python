@@ -30,10 +30,7 @@ while nextPointer[i] != None:
 	print(data[i])
 	i = nextPointer[i]
 
-
-
-#......Search...........
-
+#......Search...............
 
 s = 13
 i = head

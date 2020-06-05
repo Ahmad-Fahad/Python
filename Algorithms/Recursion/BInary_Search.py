@@ -1,7 +1,9 @@
 def Binary_Search(lst, x, l, r):
-	if l > r or r < 0:
+	if l >= r:
 		return -1
-	mid = int((l+r)/2)
+	mid = (l+r)//2
+	mid = int(mid)
+	print("__",mid)
 	if lst[mid] == x:
 		print(mid)
 		return mid
@@ -11,16 +13,11 @@ def Binary_Search(lst, x, l, r):
 		Binary_Search(lst, x, mid+1, r)
 
 lst = [1,2,3,4,5,6,7,8,9,10]
-x = 6
-l = 0
-r = len(lst)-1
-Binary_Search(lst, x, l, r)
-
-"""
-print(flag)
-if flag != -1:
-	print("Found ", flag)
-else:
-	print("Not Found")
-
-"""
+for i in range(11): 
+	x = i
+	l = 0
+	r = len(lst)-1
+	print(i)
+	flag = Binary_Search(lst, x, l, r)
+	print(flag)
+	print("......")

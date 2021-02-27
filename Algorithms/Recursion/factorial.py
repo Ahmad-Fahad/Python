@@ -6,4 +6,5 @@ def factorial(n):
 	else:
 		return n*factorial(n-1)
 
-print(factorial(5))
+for i in range(12):
+	print("{} --> {}".format(i, factorial(i)))

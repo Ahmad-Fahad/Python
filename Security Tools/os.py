@@ -26,7 +26,8 @@ os.system("ping -i 2 127.0.0.1")# Run a shell command
 # 	print(i)
 
 
-os.mkdir("Dir1") # Create a directory named path with
-os.remove("file.txt")
+# os.mkdir("Dir1") # Create a directory named path with
+# os.remove("file.txt")
 
-os.rename(Dir1, DirX)# Rename the file or directory src to dst
+# os.rename(Dir1, DirX)# Rename the file or directory src to dst
+

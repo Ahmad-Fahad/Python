@@ -1,3 +1,17 @@
+
+for i in range(2,150, 4):
+	print("{}-{},  ". format(i, i+1), end='' )
+
+print()
+
+for i in range(4,150, 4):
+	print("{}-{},  ". format(i, i+1), end='' )
+
+
+
+
+"""
+
 lst_1 = [1,2,3]
 lst_2 = [9,4,5,6]
 
@@ -26,7 +40,6 @@ while t<0:
 print(m)
 
 
-"""
 
 st = {'rr',2,3,4,5}
 st.add(8)

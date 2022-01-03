@@ -9,7 +9,7 @@ for i in range(len(lst)):
 		max_1 = lst[i]
 	elif max_2 == None or max_2 < lst[i]:
 		if max_1 != lst[i]:
-			max_2 = lst[i]
+		   max_2 = lst[i]
 print(max_1, max_2)
 
 

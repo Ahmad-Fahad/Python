@@ -28,12 +28,22 @@ WHERE CITY.COUNTRYCODE = COUNTRY.CODE
 AND COUNTRY.CONTINENT = 'Africa'
 
 
+SELECT name FROM `Employee` ORDER BY name ASC
 
 
+legal person (uri)
+
+SELECT customers.name
+FEROM customers INNER JOIN legal_person
+ON customers.id = legal_person.id_customers
 
 
+average population of each continent
 
-
+SELECT COUNTRY.CONTINENT, FLOOR(AVG(CITY.POPULATION)) 
+FROM CITY INNER JOIN COUNTRY 
+ON CITY.COUNTRYCODE = COUNTRY.CODE
+GROUP BY COUNTRY.CONTINENT
 
 
 

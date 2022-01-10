@@ -1,0 +1,15 @@
+n = int(input().strip())
+arr = []
+for _ in range(n):
+    arr.append(list(map(int, input().rstrip().split())))
+sum_1 = 0
+sum_2 = 0
+for i in range(0, n):
+    for j in range(0, n):
+        if(i==j):
+            sum_1 += arr[i][j]
+        if(i+j == n-1):
+            sum_2 += arr[i][j]
+
+diagonal_diff = abs(sum_1 - sum_2)
+print(diagonal_diff)

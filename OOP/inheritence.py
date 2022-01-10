@@ -14,15 +14,12 @@ class cls_child(cls_parent):
 
 	def __repr__(self):
 		return f"x is {self.x}, y is {self.y}, z is {self.z}"
-'''
-	def __init__(self, x, y):
-		self.a = x 
-		self.b = y
-	def rect_area():
-		return self.x*self.y
 
 
-'''
+
+
+
+
 c_1 = cls_parent(1111, 2222)
 print(c_1.demonstrate())
 

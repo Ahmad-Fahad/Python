@@ -1,4 +1,7 @@
 
+x = int(input("X = "))
+print(x*10)
+
 for i in range(2,150, 4):
 	print("{}-{},  ". format(i, i+1), end='' )
 

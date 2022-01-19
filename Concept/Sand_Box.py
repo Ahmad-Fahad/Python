@@ -1,3 +1,5 @@
+# two input in one line
+R, L = [int(x) for x in input().split()]
 
 x = int(input("X = "))
 print(x*10)

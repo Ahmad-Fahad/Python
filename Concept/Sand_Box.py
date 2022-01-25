@@ -1,3 +1,22 @@
+# hash syntax 
+_hash = {1:2, 4:5}
+print(_hash[4])
+
+#hash assaign from list
+target = 9
+nums = [2, 7, 11, 15]
+print(nums)
+hash_map = {}
+for i in range(len(nums)):
+	hash_map[nums[i]] = i
+for i in range(len(nums)):
+	complement = target-i
+	if complement in hash_map :
+		print(hash_map[complement])
+
+print(hash_map)
+
+
 # two input in one line
 R, L = [int(x) for x in input().split()]
 

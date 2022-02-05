@@ -1,40 +1,25 @@
 class Solution:
-	def thirdMax(self, nums: List[int]) -> int:
-		max_1 = max_2 = max_3 = None
-		for i in nums:
-			if (i == max_1) or (i == max_2) or (i == max_2):
-				continue 
+    def removeDuplicates(self, nums: List[int]) -> int:
+    	n = len(nums)
+		current_index = 1
+		for i in range(1, n):
+			if nums[i] != nums[i-1]:
+				nums[current_index] = nums[i]
+				current_index += 1
 			else:
-				if max_1 is None:
-					max_1 = i
-				elif i > max_1: 
-					max_3 = max_2
-					max_2 = max_1
-					max_1 = i
-				elif max_2 is None:
-					max_2 = i
-				elif i > max_2: 
-					max_3 = max_2
-					max_2 = i
-				elif (max_3 is None) or  (i > max_3): 
-					max_3 = i
-				 
-		if max_3 is None:
-			return max_1
-		else:
-			return max_3
- 	
+				continue
+		return current_index 
 
- 
 
-lst = [3, 1]
-print(lst, thirdMax(lst))
 
-lst = [2, 2, 3, 1]
-print(lst, thirdMax(lst))
-
-lst = [2, 1]
-print(lst, thirdMax(lst))
-
-lst = [ 2, 3, 1]
-print(lst, thirdMax(lst))
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        current_index = 1
+        nums[current_index-1] = nums[0]
+        for i in range(1, len(nums)):
+            if nums[i] != nums[i-1]:
+                nums[current_index] = nums[i]
+                current_index += 1
+            else:
+                continue
+        return current_index

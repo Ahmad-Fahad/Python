@@ -1,3 +1,9 @@
+
+
+'''
+print(__name__)
+
+
 <div class='col-md-6 col-sm-6 single-contact-detail'>
               <div class='header'>
                 <i class='lnr lnr-phone-handset'/>
@@ -22,3 +28,5 @@
            
 
            <span class='typist-text' data-typist='typist-blink' id='typist-element'>Computer Engineer</span>
+
+           '''

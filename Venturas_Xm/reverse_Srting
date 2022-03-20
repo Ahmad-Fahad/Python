@@ -1,0 +1,14 @@
+strg = input()
+l = len(strg)
+print(l)
+
+rev_str=""
+for i in range(l-1, 0, -1):
+	rev_str = rev_str + strg[i]
+print(rev_str)
+
+
+rev_str=""
+for i in strg:
+	rev_str = rev_str + i
+print(rev_str)

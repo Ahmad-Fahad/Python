@@ -1,4 +1,6 @@
- 
+next_module_start = int(input("Enter Next Module Start Page: "))+16
+print(next_module_start)
+
 '''
 print(__name__)
 
